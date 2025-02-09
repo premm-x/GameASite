@@ -19,7 +19,7 @@ const FormSection = () => {
     const changeDivColor = () => {
         if(divColor == 'bg-white'){
             setDivColor('bg-green-500');
-            navigate('/assets')
+            navigate('/admin')
         }
         else{
             setDivColor('bg-white');
