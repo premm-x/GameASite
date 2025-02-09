@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Team from './pages/Team.jsx'
 import Tools from './pages/Tools.jsx'
 import Assets from './pages/Assets.jsx'
+import AllUserComment from './pages/AllUserComment.jsx'
 
 createRoot(document.getElementById('root')).render(
 
@@ -14,6 +15,7 @@ createRoot(document.getElementById('root')).render(
       <Route path='/team' element={ <Team/> } />
       <Route path='/tools' element={ <Tools/> } />
       <Route path='/assets' element={ <Assets/> } />
+      <Route path='/usercomment' element={ <AllUserComment/> } />
     </Routes>
   </BrowserRouter>
 
