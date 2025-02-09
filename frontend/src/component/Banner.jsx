@@ -49,7 +49,7 @@ const Banner = () => {
 
             {/* sidebar */}
             
-                <div className={`w-[45%] h-screen ${toolSidebar == true ? 'flex' : 'hidden'} bg-black bg-opacity-[0.5] backdrop-blur-lg text-white fixed top-0 right-0 z-30 items-start flex-col`}>
+                <div className={`md:w-[80%] w-screen  h-screen ${toolSidebar == true ? 'flex' : 'hidden'} bg-black bg-opacity-[0.5] backdrop-blur-lg text-white fixed top-0 right-0 z-30 items-start flex-col`}>
                     <svg onClick={()=>{setToolSidebar(!toolSidebar)}} xmlns="http://www.w3.org/2000/svg" 
                         className="h-6 w-6 cursor-pointer m-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
