@@ -34,6 +34,13 @@ app.post('/userdata',async (req, res)=>{
     res.json({user});
 })
 
+app.get('/userComment', async (req, res) => {
+    const userAllData = await userModel.find({});
+    res.json({ userAllData });
+});
+
+
+
 
 const port = process.env.PORT || 3000;
 
