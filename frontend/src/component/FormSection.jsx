@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import axiosInstance from '../axios/userAxios';
 import Swal from 'sweetalert2'
+import { useNavigate } from 'react-router-dom'
 
 const FormSection = () => {
+    const navigate = useNavigate();
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -11,6 +13,18 @@ const FormSection = () => {
 
     const [error, setError] = useState('');
     const [emailError, setEmailError] = useState('');
+
+    const [divColor, setDivColor] = useState('bg-white');
+
+    const changeDivColor = () => {
+        if(divColor == 'bg-white'){
+            setDivColor('bg-green-500');
+            navigate('/assets')
+        }
+        else{
+            setDivColor('bg-white');
+        }
+    };
 
     const submitHandler = (e) =>{
         e.preventDefault();
@@ -48,7 +62,7 @@ const FormSection = () => {
     }
 
     return (
-        <div className='h-screen mt-56 '>
+        <div className='h-screen mt-56 relative'>
             <h2 className='text-white font-semibold mt-8 text-4xl text-center mb-10'>Give Your Valuble Feedback</h2>
             <div className='w-full relative'>
                 <div className='w-full h-full bg-black opacity-[0.6] absolute'></div>
@@ -94,6 +108,10 @@ const FormSection = () => {
                     </div>
                 </form>
             </div>
+
+            <div onClick={changeDivColor} 
+            className={` ${divColor} w-1 h-1 cursor-pointer md:w-2 md:h-2 rounded-full absolute bottom-5 right-5`}></div>
+        
         </div>
     );
 };
