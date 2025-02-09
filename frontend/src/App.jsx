@@ -5,7 +5,7 @@ import FormSection from './component/FormSection';
 
 function App() {
   return (
-      <div className="App bg-black">    
+      <div className="App bg-black w-screen">    
 
           <Banner/>
           <Card/>
