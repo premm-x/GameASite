@@ -24,7 +24,7 @@ const Card = () => {
 
             <h1 className='text-white font-semibold mt-8 text-4xl text-center'>Key Features</h1>
         
-            <div className='px-4 flex mb-10 items-center justify-center md:gap-20 md:flex-row flex-col'> 
+            <div className='px-4 w-screen flex mb-10 items-center justify-center md:gap-20 md:flex-row flex-col'> 
 
                 {
                     data.map((item, idx)=>(
