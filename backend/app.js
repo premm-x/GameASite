@@ -12,7 +12,7 @@ dbConnection();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
-    origin: 'https://battlesfor.onrender.com/',
+    origin: '*',
 }));
 
 
