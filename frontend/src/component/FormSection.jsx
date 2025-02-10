@@ -14,15 +14,15 @@ const FormSection = () => {
     const [error, setError] = useState('');
     const [emailError, setEmailError] = useState('');
 
-    const [divColor, setDivColor] = useState('bg-white');
+    const [divColor, setDivColor] = useState('bg-gray-900');
 
     const changeDivColor = () => {
-        if(divColor == 'bg-white'){
+        if(divColor == 'bg-gray-900'){
             setDivColor('bg-green-500');
             navigate('/admin')
         }
         else{
-            setDivColor('bg-white');
+            setDivColor('bg-gray-900');
         }
     };
 
@@ -62,7 +62,7 @@ const FormSection = () => {
     }
 
     return (
-        <div className='h-screen mt-56 relative'>
+        <div className='h-screen mt-56 relative w-full'>
             <h2 className='text-white font-semibold mt-8 text-4xl text-center mb-10'>Give Your Valuble Feedback</h2>
             <div className='w-full relative'>
                 <div className='w-full h-full bg-black opacity-[0.6] absolute'></div>
@@ -110,7 +110,7 @@ const FormSection = () => {
             </div>
 
             <div onClick={changeDivColor} 
-            className={` ${divColor} w-1 h-1 cursor-pointer md:w-2 md:h-2 rounded-full absolute bottom-5 right-5`}></div>
+            className={` ${divColor} w-1 h-1 cursor-pointer opacity-[0.5] md:w-2 md:h-2 rounded-full absolute bottom-5 right-5`}></div>
         
         </div>
     );
